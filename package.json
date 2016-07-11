@@ -8,6 +8,9 @@
     "Minh tha Hacker",
     "this.sujin tha plant"
   ],
+  "engines": {
+    "nope": "4.4.7"
+  },
   "scripts": {
     "test": "",
     "start": "",
