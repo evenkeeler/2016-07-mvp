@@ -1,4 +1,4 @@
-var app = require('server/server.js');
+var app = require('./server/server.js');
 
 
  var port = process.env.PORT || 3000;
@@ -6,7 +6,7 @@ var app = require('server/server.js');
 app.listen(port);
 
 app.get('/', function(req, res){
-  res.render('client/index.js');
+  res.render('client/index.');
 });
 
 console.log('Server now listening on port ' + port);
