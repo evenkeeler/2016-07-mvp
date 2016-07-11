@@ -8,7 +8,7 @@ var express = require('express');
 //   res.render('./client/index.html');
 // });
 
-app.use('/', express.static(__dirname +'client'));
+app.use('/', express.static(__dirname +'/client'));
 
 app.listen(port);
 
