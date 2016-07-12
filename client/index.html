@@ -3,15 +3,17 @@
 <head>
   <title>Employee shift feed</title>
 </head>
-<body>
-  <h1>quickShift</h1>
-  <div ng-controller="ShiftController as shiftCtrl">
+<body ng-controller="ShiftController as shiftCtrl">
+  <div id="controlBar">
+    <h1>quickShift</h1>
     <form>
       <input type="number" ng-model="shift.hours">
       <input type="number" ng-model="shift.rate">
       <button ng-click="shiftCtrl.addShift(shift.hours, shift.rate)">Enter Your Shift</button>
     </form>
-    <div ng-repeat="shift in shifts">{{shift.hours}} at {{shift.rate}}</div>
+  </div>
+  <div id="shiftField">
+    <div class="shift" ng-repeat="shift in shifts">{{shift.hours}} hours at {{shift.rate}}</div>
   </div>
   <div ui-view></div>
 
