@@ -1,6 +1,7 @@
 angular.module('quickShift',[
   'quickShift.services',
-  'quickShift.shifts'
+  'quickShift.shifts',
+  'ui.router'
 ])
 .config(function($stateProvider, $httpProvider) {
   $stateProvider
