@@ -1,9 +1,9 @@
 body {
-
+  margin-top: 10px;
 }
 
 .shift {
-  background-color: blue;
+  background-color: #333;
 }
 
 #shiftField {
@@ -11,5 +11,7 @@ body {
 }
 
 #controlBar {
-
+  width: 100%;
+  height: 40px;
+  background-color: #eee;
 }
