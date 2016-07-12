@@ -33,17 +33,17 @@ var shiftMethods = {
     createShift({hours: hours, rate: rate})
       .then(function(){
         console.log('inside creatShift');
-        getAllShifts({});
+        return getAllShifts({});
       })
       .then(function(shifts){
-        console.log('about to send');
+        console.log('about to send' + shifts);
         console.log(mongoose);
         res.send(shifts);
       })
   }
 }
-
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/tranquil-hamlet-96020');
+var mongooseUri = process.env.MONGODB_URI || 'mongodb://localhost/tranquil-hamlet-96020';
+mongoose.connect(mongooseUri);
 
 /************************************/
 var app = express();
