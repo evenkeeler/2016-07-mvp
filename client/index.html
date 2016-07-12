@@ -6,6 +6,9 @@
 <body>
   <h1>quickShift</h1>
   <a ui-sref="shifts">Shift View</a>
+  <div ng-controller="ShiftController as shiftCtrl">
+    <div ng-repeat="shift in shiftCtrl.shifts">something</div>
+  </div>
   <div ui-view></div>
 
 
