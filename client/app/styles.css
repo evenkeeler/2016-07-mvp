@@ -1,17 +1,23 @@
+
 body {
   margin-top: 10px;
-}
-
-.shift {
-  background-color: #333;
+  font-family: arial, sans-serif;
 }
 
 #shiftField {
-
+  margin-top: 10px;
 }
 
 #controlBar {
   width: 100%;
-  height: 40px;
+  height: 90px;
+  margin-bottom: 10px;
   background-color: #eee;
+}
+.shift{
+  margin-top: 10px;
+  border-color: azure;
+  height: 25px;
+  width: 50%;
+  background-color: aliceblue
 }
