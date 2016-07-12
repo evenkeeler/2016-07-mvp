@@ -1,8 +1,10 @@
-var app = require('./server/server.js');
 var express = require('express');
+var http = require('http');
 var path = require('path');
 
- var port = process.env.PORT || 3000;
+var app = express();
+
+var port = process.env.PORT || 3000;
 
 
 // app.get('/', function(req, res){
@@ -10,7 +12,8 @@ var path = require('path');
 // });
 
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname + '/client/index.html'));
+  // app.use(express.static('index.html'));
+ res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
 app.listen(port);
