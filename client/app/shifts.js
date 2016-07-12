@@ -1,6 +1,6 @@
 angular.module('quickShift.shifts', [])
 .controller('ShiftController', function($scope, Shifts){
-  this.shifts = Shifts.shifts;
+  $scope.shifts = Shifts.shifts;
 
 
   this.addShift = function(hours, rate){
@@ -8,6 +8,7 @@ angular.module('quickShift.shifts', [])
       Shifts.postShift(hours,rate)
         .then(function(data){
           console.log(data);
+          $scope.shifts = data;
         })
       // Shifts.getShifts(hours, rate); 
     }

@@ -11,9 +11,9 @@
       <input type="number" ng-model="shift.rate">
       <button ng-click="shiftCtrl.addShift(shift.hours, shift.rate)">Enter Your Shift</button>
     </form>
-    <div ng-repeat="shift in shiftCtrl.shifts">{{shift.hours}} at {{shift.rate}}</div>
+    <div ng-repeat="shift in shifts">{{shift.hours}} at {{shift.rate}}</div>
   </div>
-  <div ui-view></div>
+  <div ui-view></div>:()
 
 
   <script src="lib/angular/angular.js"></script>
