@@ -6,18 +6,20 @@ body {
 
 #shiftField {
   margin-top: 10px;
+  background-color: #edfdfd;
 }
 
 #controlBar {
   width: 100%;
   height: 90px;
   margin-bottom: 10px;
-  background-color: #eee;
+  background-color: #379797;
 }
 .shift{
   margin-top: 10px;
+  border-radius: 25px;
   border-color: azure;
   height: 25px;
   width: 50%;
-  background-color: aliceblue
+  background-color: #5DBCBC;
 }
