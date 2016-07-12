@@ -13,12 +13,6 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
-app.get('/shifts', function(req, res){
-  res.end('blah');
-})
-
-app.get
-
 app.listen(port);
 
 console.log('Server now listening on port ' + port);
