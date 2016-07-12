@@ -24,7 +24,6 @@ app.post('/shifts', function(req, res){
   var hours = req.body.hours,
       rate = req.body.rate;
   shifts.push({hours: hours, rate: rate});
-  console.log(shifts);
   res.send(shifts);
 });
 

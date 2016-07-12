@@ -5,7 +5,10 @@ angular.module('quickShift.shifts', [])
 
   this.addShift = function(hours, rate){
     if(hours > 0 && rate > 0){
-      this.shifts = Shifts.postShift(hours,rate);
+      Shifts.postShift(hours,rate)
+        .then(function(data){
+          console.log(data);
+        })
       // Shifts.getShifts(hours, rate); 
     }
   }

@@ -13,7 +13,6 @@ angular.module('quickShift.services',[])
 
     return $http(req).then(function(res){
       shifts = res.data;
-      console.log(shifts);
       return shifts;
     });
   };
