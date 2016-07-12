@@ -7,9 +7,9 @@ angular.module('quickShift.shifts', [])
     if(hours > 0 && rate > 0){
       Shifts.postShift(hours,rate)
         .then(function(data){
-          console.log(data);
+          console.log('shifts.js: ' + data);
           $scope.shifts = data;
-        })
+        });
       // Shifts.getShifts(hours, rate); 
     }
   }
