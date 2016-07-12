@@ -1,20 +1,35 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
+var bodyParser = require('body-parser');
+
+var shifts = [
+  { hours: 8, rate: 15},
+  { hours: 11, rate: 16},
+  { hours: 7, rate: 13},
+  { hours: 8, rate: 13}
+];
+
 
 var app = express();
 
 var port = process.env.PORT || 3000;
 
+app.use(bodyParser.json());
+// app.use(express.urlencoded());
 
-// app.get('/', function(req, res){
-//   res.render('./client/index.html');
-// });
+app.use('/', express.static(path.resolve(__dirname + '/client')));
 
-app.get('/', function(req, res){
-  // app.use(express.static('index.html'));
- res.sendFile(path.join(__dirname + '/client/index.html'));
+app.post('/shifts', function(req, res){
+  var hours = req.body.hours,
+      rate = req.body.rate;
+  shifts.push({hours: hours, rate: rate});
+  console.log(shifts);
+  res.send(shifts);
 });
+
+
+
 
 app.listen(port);
 

@@ -1,27 +1,38 @@
 angular.module('quickShift.services',[])
 .factory('Shifts', function($http){
   var shifts = [
-    { hour: 8, rate: 15},
-    { hour: 11, rate: 16},
-    { hour: 7, rate: 13},
-    { hour: 8, rate: 13}
+    { hours: 8, rate: 15}
   ];
 
-  var postShift = function(shift){
-    $http.get('127.0.1.0');
+  var postShift = function(hours, rate){
+    var req = {
+      method: "POST",
+      url: "/shifts",
+      data: {hours: hours, rate: rate}
+    };
+
+    return $http(req).then(function(res){
+      shifts = res.data;
+      console.log(shifts);
+      return shifts;
+    });
   };
 
   var getShifts = function(){
-    console.log('getting link');
-    return $http.get('/shifts').then(function(res){
-      debugger;
-      console.log(res);
-      return resp.data;
+
+    var req = {
+      method: "GET",
+      url: "/shifts",
+    };
+
+    $http(req).then(function(res){
+      console.log(res.data);
     });
   };
 
   return {
     shifts: shifts,
-    getShifts: getShifts
+    getShifts: getShifts,
+    postShift: postShift
   }
 });
