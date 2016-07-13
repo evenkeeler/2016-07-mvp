@@ -16,13 +16,13 @@
       <button ng-click="shiftCtrl.addShift(shift.hours, shift.rate)">Enter Your Shift</button>
     </form>
     <div>
-      <p>doal
+      <p>
     </div>
   </div>
   <div id="shiftField">
     <div class="shift" ng-repeat="shift in shifts">
-      <p>{{shift.hours}}</p>
-      <p>{{shift.rate}}</p>
+      <p class="hours">{{shift.hours}}</p>
+      <p class="earnings">{{shift.rate*shift.hours}}</p>
     </div>
   </div>
   <div ui-view></div>
