@@ -1,8 +1,6 @@
 angular.module('quickShift.services',[])
 .factory('Shifts', function($http){
-  var shifts = [
-    { hours: 8, rate: 15}
-  ];
+  var shifts = [];
 
   var postShift = function(hours, rate){
     var req = {
