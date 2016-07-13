@@ -24,3 +24,10 @@ body {
   width: 50%;
   background-color: #5DBCBC;
 }
+
+.hours{
+  float:right;
+}
+.earnings{
+  float: left;
+}
