@@ -1,6 +1,9 @@
 angular.module('quickShift.shifts', [])
 .controller('ShiftController', function($scope, Shifts){
   $scope.shifts = Shifts.shifts;
+  $scope.moneyMade = Shifts.shifts.reduce(function(passed, object){
+    passed += object.hours*object.rate;
+  }, 0)
 
 
   this.addShift = function(hours, rate){
